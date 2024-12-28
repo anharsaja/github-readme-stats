@@ -359,7 +359,7 @@ describe("Test renderTopLanguages", () => {
     document.body.innerHTML = renderTopLanguages(langs);
 
     expect(queryByTestId(document.body, "header")).toHaveTextContent(
-      "Most Used Languages",
+      "Boso sing tak gawe cok",
     );
 
     expect(queryAllByTestId(document.body, "lang-name")[0]).toHaveTextContent(
@@ -536,7 +536,7 @@ describe("Test renderTopLanguages", () => {
     document.body.innerHTML = renderTopLanguages(langs, { layout: "compact" });
 
     expect(queryByTestId(document.body, "header")).toHaveTextContent(
-      "Most Used Languages",
+      "Boso sing tak gawe cok",
     );
 
     expect(queryAllByTestId(document.body, "lang-name")[0]).toHaveTextContent(
@@ -568,7 +568,7 @@ describe("Test renderTopLanguages", () => {
     document.body.innerHTML = renderTopLanguages(langs, { layout: "donut" });
 
     expect(queryByTestId(document.body, "header")).toHaveTextContent(
-      "Most Used Languages",
+      "Boso sing tak gawe cok",
     );
 
     expect(queryAllByTestId(document.body, "lang-name")[0]).toHaveTextContent(
@@ -643,7 +643,7 @@ describe("Test renderTopLanguages", () => {
     });
 
     expect(queryByTestId(document.body, "header")).toHaveTextContent(
-      "Most Used Languages",
+      "Boso sing tak gawe cok",
     );
 
     expect(queryAllByTestId(document.body, "lang-name")[0]).toHaveTextContent(
@@ -663,9 +663,9 @@ describe("Test renderTopLanguages", () => {
       queryAllByTestId(document.body, "lang-donut")[1].getAttribute(
         "stroke-dashoffset",
       ) -
-        queryAllByTestId(document.body, "lang-donut")[0].getAttribute(
-          "stroke-dashoffset",
-        ),
+      queryAllByTestId(document.body, "lang-donut")[0].getAttribute(
+        "stroke-dashoffset",
+      ),
       totalCircleLength,
     );
     expect(HTMLLangPercent).toBeCloseTo(40);
@@ -681,9 +681,9 @@ describe("Test renderTopLanguages", () => {
       queryAllByTestId(document.body, "lang-donut")[2].getAttribute(
         "stroke-dashoffset",
       ) -
-        queryAllByTestId(document.body, "lang-donut")[1].getAttribute(
-          "stroke-dashoffset",
-        ),
+      queryAllByTestId(document.body, "lang-donut")[1].getAttribute(
+        "stroke-dashoffset",
+      ),
       totalCircleLength,
     );
     expect(javascriptLangPercent).toBeCloseTo(40);
@@ -697,9 +697,9 @@ describe("Test renderTopLanguages", () => {
     );
     const cssLangPercent = langPercentFromDonutVerticalLayoutSvg(
       totalCircleLength -
-        queryAllByTestId(document.body, "lang-donut")[2].getAttribute(
-          "stroke-dashoffset",
-        ),
+      queryAllByTestId(document.body, "lang-donut")[2].getAttribute(
+        "stroke-dashoffset",
+      ),
       totalCircleLength,
     );
     expect(cssLangPercent).toBeCloseTo(20);
@@ -726,9 +726,9 @@ describe("Test renderTopLanguages", () => {
 
     const HTMLLangPercent = langPercentFromDonutVerticalLayoutSvg(
       totalCircleLength -
-        queryAllByTestId(document.body, "lang-donut")[0].getAttribute(
-          "stroke-dashoffset",
-        ),
+      queryAllByTestId(document.body, "lang-donut")[0].getAttribute(
+        "stroke-dashoffset",
+      ),
       totalCircleLength,
     );
     expect(HTMLLangPercent).toBeCloseTo(100);
@@ -738,7 +738,7 @@ describe("Test renderTopLanguages", () => {
     document.body.innerHTML = renderTopLanguages(langs, { layout: "pie" });
 
     expect(queryByTestId(document.body, "header")).toHaveTextContent(
-      "Most Used Languages",
+      "Boso sing tak gawe cok",
     );
 
     expect(queryAllByTestId(document.body, "lang-name")[0]).toHaveTextContent(
